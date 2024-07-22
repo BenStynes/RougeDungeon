@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqvv1sjotkg6b"]
+
+[ext_resource type="PackedScene" uid="uid://d1xeok47bsqdo" path="res://Assets/Models/Dungeon/gltf/floor_tile_small.gltf.glb" id="1_m83ob"]
+[ext_resource type="PackedScene" uid="uid://k0al10dk4u52" path="res://Assets/Models/Dungeon/gltf/wall.gltf.glb" id="2_tvodq"]
+[ext_resource type="PackedScene" uid="uid://dr46gvocgl8oy" path="res://Assets/Models/Dungeon/gltf/wall_corner.gltf.glb" id="3_gx7ng"]
+[ext_resource type="PackedScene" uid="uid://cpuyl57vyv8qb" path="res://Assets/Models/Dungeon/gltf/wall_Tsplit.gltf.glb" id="4_crh8w"]
+[ext_resource type="PackedScene" uid="uid://dlrup7r2cc3gx" path="res://Assets/Models/Dungeon/gltf/wall_open_scaffold.gltf.glb" id="5_xfdjk"]
+[ext_resource type="PackedScene" uid="uid://bk3eabe6fp3cm" path="res://Assets/Models/Dungeon/gltf/wall_doorway_scaffold.glb" id="6_1y8s2"]
+[ext_resource type="PackedScene" uid="uid://b3wlex67nm10c" path="res://Assets/Models/Dungeon/gltf/stairs_wood_decorated.gltf.glb" id="7_0x2jr"]
+
+[node name="Tiles" type="Node3D"]
+
+[node name="floor_tile_small_gltf" parent="." instance=ExtResource("1_m83ob")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.424792, -0.116692, -0.159423)
+
+[node name="wall_gltf" parent="." instance=ExtResource("2_tvodq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.282111, 4.33488)
+
+[node name="wall_corner_gltf" parent="." instance=ExtResource("3_gx7ng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.56218)
+
+[node name="wall_Tsplit_gltf" parent="." instance=ExtResource("4_crh8w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.90931)
+
+[node name="wall_open_scaffold_gltf" parent="." instance=ExtResource("5_xfdjk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.5411)
+
+[node name="wall_doorway_scaffold2" parent="." instance=ExtResource("6_1y8s2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.4912)
+
+[node name="stairs_wood_decorated_gltf" parent="." instance=ExtResource("7_0x2jr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15.7213)
