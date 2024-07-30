@@ -3,7 +3,7 @@ using Godot;
 public abstract partial class EnemyState : CharachterState
 {
     protected Vector3 destination;
-    
+   protected CharacterBody3D target;
 
     protected Vector3 GetPointGlobalPosition(int index)
     {
@@ -19,5 +19,15 @@ public abstract partial class EnemyState : CharachterState
         characterNode.Flip();
         characterNode.MoveAndSlide();
 
+    }
+    protected void HandleChaseAreaBodyEntered(Node3D body)
+    {
+        characterNode.StateMachineNode.SwitchState<EnemyChaseState>();
+    }
+
+    
+    protected void HandleAttackAreaBodyEntered(Node3D body)
+    {
+        characterNode.StateMachineNode.SwitchState<EnemyAttackState>();
     }
 }

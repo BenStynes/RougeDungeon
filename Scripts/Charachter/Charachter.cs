@@ -11,6 +11,10 @@ public partial class Charachter : CharacterBody3D
   [ExportGroup("AI Nodes")]
  [Export]public Path3D PathNode {get; private set;}
  [Export] public NavigationAgent3D AgentNode{get; private set;}
+ [Export] public Area3D ChaseAreaNode {get; private set;}
+
+   [ExportGroup("Attack Nodes")]
+   [Export] public Area3D AttackAreaNode {get; private set;}
     public Vector2 direction = new();
 
      public float Gravity = ProjectSettings.GetSetting("physics/2d/default_gravity").AsSingle();

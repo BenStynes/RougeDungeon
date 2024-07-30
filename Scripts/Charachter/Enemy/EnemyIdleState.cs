@@ -19,5 +19,12 @@ public partial class EnemyIdleState : EnemyState
        
           characterNode.Sprite3DNode.Animation = GameConstants.ANIM_IDLE;
          characterNode.Sprite3DNode.Play();
+        characterNode.ChaseAreaNode.BodyEntered += HandleChaseAreaBodyEntered;
+
     }
+    protected override void ExitState()
+    {
+                characterNode.ChaseAreaNode.BodyEntered -= HandleChaseAreaBodyEntered;
+
+    }   
 }
