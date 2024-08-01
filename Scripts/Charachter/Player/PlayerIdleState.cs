@@ -12,14 +12,11 @@ public partial class PlayerIdleState : PlayerState
        }
          characterNode.HandleGravity(delta);
     }
-       public override void _Input(InputEvent @event)
+ public override void _Input(InputEvent @event)
     {
-      if (Input.IsActionJustPressed(GameConstants.INPUT_MOVE_SLIDE))
-      {
-      characterNode.StateMachineNode.SwitchState<PlayerDashState>();
-        
-      }
+        base._Input(@event);
     }
+    
     protected override void EnterState()
     {
           

@@ -18,6 +18,8 @@ public partial class GameConstants
     public const string INPUT_MOVE_FORW = "MoveForward";
     public const string INPUT_MOVE_BACK = "MoveBack";
     public const string INPUT_MOVE_SLIDE = "Dash";
+    public const string INPUT_ATTACK = "Attack";
+
 
 }
 

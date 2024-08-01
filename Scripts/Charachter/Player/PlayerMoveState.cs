@@ -25,17 +25,14 @@ public partial class PlayerMoveState : PlayerState
     }
     }
 
-    
-     public override void _Input(InputEvent @event)
-    {
-      if (Input.IsActionJustPressed(GameConstants.INPUT_MOVE_SLIDE))
-      {
-      characterNode.StateMachineNode.SwitchState<PlayerDashState>();
-        
-      }
 
+    public override void _Input(InputEvent @event)
+    {
+        base._Input(@event);
     }
-      protected override void EnterState()
+
+
+    protected override void EnterState()
     {
          
           characterNode.Sprite3DNode.Animation = GameConstants.ANIM_MOVE;
